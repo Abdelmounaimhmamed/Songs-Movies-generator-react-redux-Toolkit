@@ -1,0 +1,84 @@
+* redux is library  for managing state using the same technics as use reducers . 
+* redux is a library . 
+* dispatc function , reducers , actions, payloads .... 
+* in use reducer , we pass an acion object to the dispatch function in order to execte a reducer and change some state . 
+* in redux we still have the same technics dispatch function and much more 
+* usereducer : we create and manage the state in the componets and it child 
+* in the world of redux we create a seperate object called the redux store . 
+* the redux store contains the dispatch function reducers and state . 
+* the redux store is complety outside of the application 
+* the react-redux is the way that we connect the components with the store . 
+* in use Reducer we make one simple reducer but in reduw we make or create a couple of reducers  
+* in redux we will have a reducer that daeals with users one for mesages and so on . 
+* in the world of redux the dispatch function is like a router of any actin , it call the appropriate reducers to be executed !
+
+
+* the purpose of the redux toolkit is to splify the action type creation process !
+* to simplfy the amount of the use of the swicth statement inside the the reducer function . 
+* in the redux store we will have on big state object 
+* each items in the state object : will be managed by one reducers 
+
+* store is an object that gonna holds all of our state .
+* we usually do not have to intercat with it directly .
+* the react-redux will handle the store for us . 
+* a slice is what going to create for us an action and a reducer . 
+
+* slices : are going to define some initale state . 
+* conbine mini-reducers into a big reducer 
+* create a set of 'action creator' function . 
+* slices are what going to save us from having to write out all this boilerplate 
+* boilerplate : reducer , switch , cases , action types and much more . 
+* the slice have a reducer that combine the sub reducers 
+* the combined reducers is what is get loaded in the redux store . 
+* the state present in the slice is only the piece of the state present in the slice . 
+
+
+
+* link react with redux :
+* component iside the  react-app needs some state inside our redux store : so they need to dispatch some actions . 
+* we use some hooks in order to access or disatch some actions . 
+* to connect react-redux : 
+* export the store from what ever file itis created in . 
+* import the store  into the root idex.js 
+* import Provider from the react-redux lb 
+* wrap all component with the Provider pass the sore to the provider
+* in order to update a state inside our coponents we should dispatch some actions . 
+
+
+
+*  change a state inside a component : 
+* add a reducer to one of your slices that changes state in some particular way 
+* export the action creator that the slice automatically creates . 
+* find the component that you to dispatch from 
+* import the action creator function and useDispatch() from react-redux 
+* call the useDispatch hook to get access the dispatch func 
+* when the user do somethings  . call the action creator to get action , the dispatch it . 
+
+* to update a state inside the store then we should create an action obejct . 
+* dispatch this action . 
+* then gonna cause our reducer to run . 
+* and finaly update state . 
+
+
+* the action creator takes the payload inside of it and the action_creator(payload) === action that we gonna dspatch 
+* inside the reducers inside the sice : each func is reducer : in order to run this reducer or this specific reducer we should have a acton type : that what rtk creates for us . 
+* the action creator and the payload creates for us a payload with  a type and with payload 
+* to execute a reducer we shoudl dispatch an action 
+* to dispatch an action we should create an action
+* to create an action we should use the action creatro from the slice and pass to it the payload .
+
+
+* Accessing the state in a components . 
+* the steps : 
+* find a componets that needs to access the state . 
+* import the use selector hooks from react-redux 
+* call the hook , passing in a selector function 
+* use the state, and anytime the state is changed the components will be rendered against and against . 
+* inside the slice : the state keyword means or refer to the state ma,aged by the slice . 
+* redux tool kit uses the immer or behind the scens . 
+* in the world of redux toolkit we can watch for other slices updates . 
+
+
+
+* the combined reducer is a function : that listen to incoming action and match it with what it have as reducer and execute them 
+* 
